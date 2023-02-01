@@ -3,12 +3,19 @@
 
 /*
     1. Створити константу для категорій  - li.item
-    2. Створити цикл для перебoру категорій
+    2. Вивести кількість категорій
+    3. Створити цикл для перебoру категорій
    
 */
 
-const numberOfCategories = document.querySelectorAll(".item");
+const categories = document.querySelectorAll(".item");
 
-console.log("Number of categories:", numberOfCategories.length);
+console.log("Number of categories:", categories.length);
 
-console.log(numberOfCategories);
+for (const category of categories) {
+    
+}
+    
+
+
+console.log(categories);
