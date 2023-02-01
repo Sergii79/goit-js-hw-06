@@ -4,18 +4,29 @@
 /*
     1. Створити константу для категорій  - li.item
     2. Вивести кількість категорій
-    3. Створити цикл для перебoру категорій
-   
+    3. Створити цикл для перебoру елементів категорій
+    4. Знайти Заголовки <h2>
+    5. Вивести контент Заголовків
+    6. Знайти кількість елементів в категорії <li>
+    7. Вивести знайдену кількість елементів   
 */
 
 const categories = document.querySelectorAll(".item");
 
 console.log("Number of categories:", categories.length);
 
-for (const category of categories) {
-    
-}
-    
+//* 1-й варіант:
+// for (const category of categories) {//
+//     const title = category.firstElementChild.textContent;
+//     console.log("Category:", title);
+//     const subtitle = category.lastElementChild.children.length;
+//     console.log("Elements:", subtitle);
+// }
 
-
-console.log(categories);
+//* 2-й варіант:
+categories.forEach((item) => {
+    const title = item.firstElementChild.textContent;
+    console.log("Category:", title);
+    const subtitle = item.lastElementChild.children.length;
+    console.log("Elements:", subtitle);
+}) ;
