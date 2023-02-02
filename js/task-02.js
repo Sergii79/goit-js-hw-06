@@ -4,13 +4,13 @@
 //* 4. Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 
 /*
-    1. Створити елемент <li>
-    2. Додати назви в створені <li>
-    3. Створити цикл для перебoру елементів категорій
-    4. Знайти Заголовки <h2>
-    5. Вивести контент Заголовків
-    6. Знайти кількість елементів в категорії <li>
-    7. Вивести знайдену кількість елементів   
+    1. Створити цикл для перебoру елементів категорій 
+    2. Створити елемент <li>
+    3. Додати назви в створені <li>
+    4. Створит контейнер для подальшого запису в html
+    5. Запушити елемент <li> в контейнер
+    6. Додасти елементу клас item.
+    7. Вивести елемент <li> 
 */
 
 const ingredients = [
@@ -22,41 +22,23 @@ const ingredients = [
   'Condiments',
 ];
 
-// console.log(ingredients);
-
 const container = document.getElementById("ingredients")
 
-
+//* 1-й варіант:
 for (const item of ingredients) {
-  const itemElement = document.createElement("li")
+  const itemElement = document.createElement("li");
   itemElement.textContent = item;
   container.append(itemElement);
 
   console.log(itemElement);  
 }
 
-
-
-
-
-// const ingredientsList = document.querySelector("#ingredients");
-// ingredientsList.append(
-//   ...ingredients.map((item) => {
-//     let itemList = document.createElement("li");
-//     itemList.textContent = item;
-//     return itemList;
-//   })
-// );
-
-// / const list = ingredients.map((item) => {
-//   let itemList = document.createElement("li");
-//   itemList.textContent = item;
-//   return itemList;
+//* 2-й варіант:
+// const list = ingredients.map((item) => {
+//   const itemElement = document.createElement("li");
+//   itemElement.textContent = item;
+//   return itemElement;
 // });
-// ingredientsList.append(...list);
+// container.append(...list);
+// console.log(list);
 
-// for (let item of ingredients) {
-//  let itemList = document.createElement("li");
-//  itemList.textContent = item;
-//  ingredientsList.append(itemList);
-// }
