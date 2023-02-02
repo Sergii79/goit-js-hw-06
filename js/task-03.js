@@ -1,3 +1,20 @@
+//* 1. Напиши скрипт для створення галереї зображень на підставі масиву даних. HTML містить список ul.gallery.
+//* 2. Усі елементи галереї повинні додаватися в DOM за одну операцію додавання.
+//* 3. Додай мінімальне оформлення галереї флексбоксами або грідами через CSS класи.
+
+/*
+    1. Створит контейнер для подальшого запису в html 
+       Створити цикл для перебoру масиву images
+    2. Створити елемент <li>
+    3. Додати назви в створені <li>
+    4. Створит контейнер для подальшого запису в html
+    5. Запушити елемент <li> в контейнер
+    6. Додати елементу клас item.
+    7. Вивести елемент <li> 
+*/
+
+const getGallery = document.querySelector(".gallery")
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -12,3 +29,15 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+// for (const img of images) {
+//   const itemElement = document.createElement("li");
+//    itemElement.textContent = img;
+//    getGallery.append(itemElement);
+// }
+
+const newImages = images
+  .map((item) => `<li class="imgTaskThree"><img src="${item.url}" alt="${item.alt}" width="300" height="200"></img></li>`)
+  .join("");
+
+getGallery.insertAdjacentHTML("beforeend", newImages);
