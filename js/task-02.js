@@ -25,6 +25,7 @@ const ingredients = [
 const container = document.getElementById("ingredients")
 
 //* 1-й варіант:
+
 for (const item of ingredients) {
   const itemElement = document.createElement("li");
   itemElement.textContent = item;
@@ -34,6 +35,7 @@ for (const item of ingredients) {
 }
 
 //* 2-й варіант:
+
 // const list = ingredients.map((item) => {
 //   const itemElement = document.createElement("li");
 //   itemElement.textContent = item;

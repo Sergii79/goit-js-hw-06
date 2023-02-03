@@ -16,6 +16,7 @@ const categories = document.querySelectorAll(".item");
 console.log("Number of categories:", categories.length);
 
 //* 1-й варіант:
+
 // for (const category of categories) {//
 //     const title = category.firstElementChild.textContent;
 //     console.log("Category:", title);
@@ -24,6 +25,7 @@ console.log("Number of categories:", categories.length);
 // }
 
 //* 2-й варіант:
+
 categories.forEach((item) => {
     const title = item.firstElementChild.textContent;
     console.log("Category:", title);

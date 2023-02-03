@@ -7,10 +7,10 @@
        Створити цикл для перебoру масиву images
     2. Створити елемент <li>
     3. Додати назви в створені <li>
-    4. Створит контейнер для подальшого запису в html
-    5. Запушити елемент <li> в контейнер
-    6. Додати елементу клас item.
-    7. Вивести елемент <li> 
+    4. 
+    5. 
+    6. 
+    7. 
 */
 
 const getGallery = document.querySelector(".gallery")
@@ -30,14 +30,16 @@ const images = [
   },
 ];
 
+//* 1-й варіант:
+
+const newImages = images
+.map((item) => `<li class="imgTaskThree"><img src="${item.url}" alt="${item.alt}" width="300" height="200"></img></li>`)
+.join("");
+
+getGallery.insertAdjacentHTML("beforeend", newImages);
+
 // for (const img of images) {
 //   const itemElement = document.createElement("li");
 //    itemElement.textContent = img;
 //    getGallery.append(itemElement);
 // }
-
-const newImages = images
-  .map((item) => `<li class="imgTaskThree"><img src="${item.url}" alt="${item.alt}" width="300" height="200"></img></li>`)
-  .join("");
-
-getGallery.insertAdjacentHTML("beforeend", newImages);
