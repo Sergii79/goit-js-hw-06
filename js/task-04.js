@@ -2,12 +2,12 @@ const counter = {
     value: 0,
 
     decrement() {
-        console.log("decrement -> this", this);
+        console.log(this);
         this.value -= 1;
     },
 
     increment() {
-        console.log("increment -> this", this);
+        console.log(this);
         this.value += 1;
     },
 };
