@@ -15,6 +15,7 @@ const categories = document.querySelectorAll(".item");
 
 console.log("Number of categories:", categories.length);
 
+
 //* 1-й варіант:
 
 // for (const category of categories) {//
@@ -23,6 +24,7 @@ console.log("Number of categories:", categories.length);
 //     const subtitle = category.lastElementChild.children.length;
 //     console.log("Elements:", subtitle);
 // }
+
 
 //* 2-й варіант:
 

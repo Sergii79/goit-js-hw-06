@@ -8,6 +8,7 @@ const box = {
     spanEl: document.querySelector('#name-output'),
 };
 
+
 //* 1-й варіант:
 
 box.inputEl.addEventListener(`input`, (event) => {
@@ -17,6 +18,7 @@ box.inputEl.addEventListener(`input`, (event) => {
     if (event)
     {return box.spanEl.textContent = event.currentTarget.value}
 })
+
 
 //* 2-й варіант:
 

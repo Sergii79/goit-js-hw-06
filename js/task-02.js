@@ -24,6 +24,7 @@ const ingredients = [
 
 const container = document.getElementById("ingredients")
 
+
 //* 1-й варіант:
 
 for (const item of ingredients) {
@@ -33,6 +34,7 @@ for (const item of ingredients) {
 
   console.log(itemElement);  
 }
+
 
 //* 2-й варіант:
 
