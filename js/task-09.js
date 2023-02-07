@@ -3,9 +3,21 @@ function getRandomHexColor() {
 }
 
 const body = document.querySelector('body');
-console.log(body);
 
-const color = getRandomHexColor();
+const button = document.querySelector('.change-color');
 
-const buttonChange = document.querySelector('.change-color');
-buttonChange.addEventListener('click, buttonChangeColor');
+const span = document.querySelector('.color');
+
+function buttonChange() {
+
+  //* 1-й варіант тіла функції:
+  body.style.backgroundColor = getRandomHexColor();
+  span.textContent = getRandomHexColor();
+
+  //* 2-й варіант тіла функції:
+  // const color = getRandomHexColor();
+  // span.textContent = color;
+  // body.style.backgroundColor = color;  
+}
+
+button.addEventListener('click', buttonChange);
